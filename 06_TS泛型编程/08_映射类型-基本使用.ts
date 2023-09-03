@@ -1,19 +1,13 @@
-// 映射类型不能使用interface来定义
-// Type=== IPerson
-// keyof = name| age
+// 映射类型不能使用interface定义
 type MapPerson<T> = {
-  // [index:number]:any
-  // 索引类型依次进行使用
-  [property in keyof T]: T[property];
+  [property in keyof T]?: T[property];
 };
 
 interface IPerson {
   name: string;
   age: number;
-}
-interface NewPerson {
-  name: string;
-  age: number;
+  x: () => void;
 }
 
+type NewPeron = MapPerson<IPerson>;
 export {};

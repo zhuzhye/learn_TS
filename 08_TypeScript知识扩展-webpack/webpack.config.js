@@ -1,5 +1,5 @@
 const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWeabpckPlugin = require("html-webpack-plugin")
 
 module.exports = {
     mode: "development",
@@ -18,14 +18,10 @@ module.exports = {
                 test: /\.ts$/,
                 loader: "ts-loader"
             },
-            {
-                test: /\.(png|jpe?g|svg|gif)$/,
-                type: "asset/resource"
-            }
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlWeabpckPlugin({
             template: "./index.html"
         })
     ]

@@ -1,5 +1,14 @@
-import Request from "../";
+import httpRequest from "..";
+interface DataType {
+  data: any;
+  success: boolean;
+  returnCode: string;
+}
 
-Request.request({
-  url: "xx",
-});
+httpRequest
+  .request<DataType>({
+    url: "/home/multidata",
+  })
+  .then((res) => {
+    console.log(res);
+  });

@@ -24,3 +24,5 @@ class Student extends Person {
 }
 const p = new Person("zzy", 19);
 const student = new Student("zzy", 19).studying();
+
+export {};
